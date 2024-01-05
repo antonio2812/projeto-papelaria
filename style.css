@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@100&family=Roboto+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: cake;
+    background-color: #ffd0d4;
+    color: black;
+}
+
+header {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #ffd0d4;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 30px;
+}
+
+i {
+    color: #FFF;
+}
+
+.header-icons {
+    display: flex;
+    gap: 14px;
+    margin-left: 20px;
+}
+
+.header-icons a:hover i {
+    animation: translateY 0.8s infinite alternate;
+    color: #ff4454;
+}
+
+@keyframes translateY {
+    from {
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+.header-button {
+    border: 1px solid #FFF;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: #000;
+    background-color: transparent;
+    transition: background-color 0.8s;
+}
+
+.header-button:hover {
+    border: 1px solid #ff7883;
+    background-color: #ff7883;
+}
+
+.header-logo .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    margin-left: 105px;
+    width: 140px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-content i {
+        margin-top: 13px;
+        margin-bottom: 29px;
+        font-size: 34px;
+    }
+
+    .header-logo img {
+        width: 160px;
+        margin-top: 80px;
+        margin-bottom: 10px;
+        margin-right: 90px;
+    }
+
+    .header-button {
+        display: none;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+    /* background-color: #fff; */
+}
+
+.bg-home {
+    position: relative;
+    background-color: #ffd0d4;
+}
+
+.bg-home::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+
+.hero {
+    color: #000;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+}
+
+.hero h1 {
+    text-align: center;
+    line-height: 150%;
+    max-width: 940px;
+    font-size: 46px;
+    font-family: sans-serif;
+}
+
+.hero p {
+    text-align: center;
+    margin: 14px 0;
+}
+
+.button-contact {
+    padding: 14px 28px;
+    color: #FFF;
+    background-color: #ff4454;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+    margin-top: 10px;
+}
+
+.button-contact:hover {
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        padding: 0 14px;
+        width: 100%;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+}
+
+.about {
+    background-color: #fff;
+    overflow: hidden;
+    color: #000;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+}
+
+.about-content img {
+    max-width: 550px;
+    height: 500px;
+    margin-left: 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.545);
+}
+
+.about-content div {
+    flex: 1;
+}
+
+.about-description h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 24px;
+}
+
+.about-description p {
+    margin-bottom: 14px;
+    text-align: left;
+    line-height: 150%;
+    max-width: 400px;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img {
+        margin-right: 30px;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+.services {
+    background-color: #FFF;
+    color: #232224;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+    width: 100%;
+}
+
+.services-content h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.services-content p {
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+}
+
+.haircuts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 0 44px 34px 44px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#vendidos {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+#novidades {
+    margin: 40px 0 20px 0;
+}
+
+.haircut {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45); */
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.haircut img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.haircut img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.haircut-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background-color: #FFF;
+    z-index: 99;
+}
+
+.haircut-info button {
+    color: #FFF;
+    background-color: #ff4454;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0;
+    cursor: default;
+}
+
+.haircuts2 {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.haircut1 {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    overflow: hidden;
+    grid-area: haircut1;
+}
+
+.haircut2 {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45); */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    overflow: hidden;
+    grid-area: haircut2;
+}
+
+.haircut3 {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45); */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    overflow: hidden;
+    grid-area: haircut3;
+}
+
+.haircut4 {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45); */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    overflow: hidden;
+    grid-area: haircut4;
+}
+
+.haircut1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.haircut2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.haircut3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.haircut4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.haircut1 img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.haircut2 img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.haircut3 img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.haircut4 img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.haircut1 .haircut-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background-color: #FFF;
+    z-index: 99;
+}
+
+.haircut2 .haircut-info {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background-color: #FFF;
+    z-index: 99;
+}
+
+.haircut3 .haircut-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background-color: #FFF;
+    z-index: 99;
+}
+
+.haircut4 .haircut-info {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    padding: 14px;
+    background-color: #FFF;
+    z-index: 99;
+}
+
+
+@media (max-width: 1174px) {
+
+    .haircuts2 {
+        display: grid;
+        grid-template-areas: "haircut1 haircut2"
+            "haircut3 haircut4";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 60px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .haircuts2 {
+        grid-template-areas: "haircut1"
+            "haircut2"
+            "haircut3"
+            "haircut4";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 70px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 390px) {
+    .haircuts2 {
+        grid-row-gap: 30px;
+    }
+
+    .haircuts2 .haircut-info {
+        text-align: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .haircut2 .haircut-info {
+        height: 120px;
+    }
+
+    .haircut4 .haircut-info {
+        height: 120px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 280px) {
+    .haircut .haircut-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .haircut .haircut-info strong {
+        text-align: center;
+    }
+}
+
+#endereco {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* @media (max-width: 1034px) {
+    .haircuts2 {
+        display: grid;
+        grid-template-areas: "haircut haircut"
+                             "haircut haircut";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+
+    .haircut {
+        grid-area: haircut;
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    .haircuts {
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .haircut {
+        max-width: 270px;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+}
+
+.footer .logo {
+    color: #000;
+    cursor: pointer;
+}
+
+.footer .paragrafo {
+    text-align: center;
+    color: #000;
+    opacity: 10;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 14px;
+    margin-left: 20px;
+    color: #FFF;
+}
+
+.footer-icons a:hover i {
+    animation: translateY 0.8s infinite alternate;
+    color: #ff4454;
+}
+
+/* .footer-icon {
+    display: flex;
+    gap: 8px;
+    color: #000;
+}
+
+
+.footer .icon {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    left: 600px;
+    top: 2410px;
+    bottom: 20px;
+}
+
+.footer .icon li a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #222;
+    margin-left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+
+    text-decoration: none;
+    color: black;
+}
+
+.icon li a:hover {
+    background: #e51e2a;
+    transform: translateY(-20px)
+}
+
+.icon li a img {
+    transform: scale(0.5);
+    filter: invert(1);
+} */
+
+
+
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+}
+
+.btn-whatsapp img {
+    max-width: 74px;
+    transition: transform 0.4s;
+}
+
+.btn-whatsapp img:hover {
+    transform: scale(1.1);
+}
+
+.btn-whatsapp .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #232224;
+    color: #FFF;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-whatsapp img {
+        max-width: 64px;
+        margin-right: 19px;
+    }
+}
+
+@font-face {
+    font-family: cake;
+    src: url(./fonts/Cream\ Cake.otf) format(opentype);
+}
+
+body {
+    font-family: cake;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #ffd0d4;
+}
+
+button {
+    font-family: "Sora", sans-serif;
+    cursor: pointer;
+}
+
+svg {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
