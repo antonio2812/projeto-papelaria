@@ -19,7 +19,7 @@
 
 ## 💻  Projeto
 
-Meu primeiro projeto freelancer para uma Papelaria Personalizada, onde tive contato com o meu primeiro cliente.
+Meu primeiro projeto freelancer para uma Papelaria Personalizada, onde tive contato com o meu primeiro cliente. Este projeto tem o propósito de mostrar e despertar o interesse dos clientes em comprar os produtos da papelaria, com ícone funcional do instagram e botão de entrar em contato, onde os clientes são direcionados para o WhatsApp da proprietária da papelaria com uma mensagem pronta.
 
 [Visite o projeto online](https://nk-digital-artes.vercel.app/)
 
