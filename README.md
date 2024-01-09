@@ -41,7 +41,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ```bash
   # Entrar no diretório
-  $ cd shorts-summary
+  $ cd projeto-papelaria
 ```
 
 ```bash
